@@ -1,0 +1,7 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+npm exec pretty-quick --staged && npm exec concurrently npm:test npm:lint
+#!/bin/sh
+# exit 1 will prevent commit to happen, so you can more easily debug things
+echo "it's working" && exit 1
