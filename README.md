@@ -1,4 +1,6 @@
 # SingleSpaMicroFrontEnd
+# Fix commit Warning for husky pre-commit
+    git commit -m "message" --no-verify
 # Install CLI for Single Spa MFE
     npm i -g create-single-spa
 # Create a  single spa
