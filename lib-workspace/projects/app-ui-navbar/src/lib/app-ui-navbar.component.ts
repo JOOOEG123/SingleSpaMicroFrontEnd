@@ -2,11 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'lib-app-ui-navbar',
-  template: `
-    <p>
-      app-ui-navbar works!
-    </p>
-  `,
+  templateUrl: './app-ui-navbar.component.html',
   styles: [
   ]
 })
