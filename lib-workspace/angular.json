@@ -1,0 +1,41 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "app-ui-navbar": {
+      "projectType": "library",
+      "root": "projects/app-ui-navbar",
+      "sourceRoot": "projects/app-ui-navbar/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/app-ui-navbar/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/app-ui-navbar/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/app-ui-navbar/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/app-ui-navbar/src/test.ts",
+            "tsConfig": "projects/app-ui-navbar/tsconfig.spec.json",
+            "karmaConfig": "projects/app-ui-navbar/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "analytics": "14203281-9dbb-482a-891e-e1204cbd99e3"
+  }
+}
