@@ -1,6 +1,7 @@
 const { merge } = require("webpack-merge");
 const singleSpaDefaults = require("webpack-config-single-spa-ts");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+// https://stackoverflow.com/questions/34870888/serving-static-assets-in-webpack-dev-server
 
 const express = require("express");
 const path = require("path");
