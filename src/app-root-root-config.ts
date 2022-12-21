@@ -13,6 +13,9 @@ const applications = constructApplications({
     return System.import(name);
   },
 });
+
+// (window as any).env = process.env.PATH;
+// console.log(process.env)
 const layoutEngine = constructLayoutEngine({ routes, applications });
 
 applications.forEach(registerApplication);

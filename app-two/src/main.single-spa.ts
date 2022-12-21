@@ -25,6 +25,8 @@ const lifecycles = singleSpaAngular({
   NgZone,
 });
 
+console
+
 export const bootstrap = lifecycles.bootstrap;
 export const mount = lifecycles.mount;
 export const unmount = lifecycles.unmount;

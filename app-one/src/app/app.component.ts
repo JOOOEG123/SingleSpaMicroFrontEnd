@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app-one';
+  // @ts-ignore
+  h = $ENV.ENVIRONMENT
+
+  g = $ENV;
 }

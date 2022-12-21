@@ -37,3 +37,11 @@ declare module "*.svg" {
   const src: string;
   export default src;
 }
+
+declare var $ENV: Env;
+
+interface Env {
+  ENVIRONMENT: string;
+  SomeAPIKey: string;
+  SomeOtherAPIKey: string;
+}

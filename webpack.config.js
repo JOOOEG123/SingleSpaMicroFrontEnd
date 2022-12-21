@@ -1,7 +1,10 @@
 const { merge } = require("webpack-merge");
+const webpack = require("webpack");
 const singleSpaDefaults = require("webpack-config-single-spa-ts");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 // https://stackoverflow.com/questions/34870888/serving-static-assets-in-webpack-dev-server
+
+// eslint-disable-next-line no-console
 
 const express = require("express");
 const path = require("path");
@@ -24,6 +27,14 @@ module.exports = (webpackConfigEnv, argv) => {
         templateParameters: {
           isLocal: webpackConfigEnv && webpackConfigEnv.isLocal,
           orgName,
+        },
+      }),
+      new webpack.EnvironmentPlugin(),
+      new webpack.DefinePlugin({
+        $ENV: {
+          ENVIRONMENT: JSON.stringify("process.env.ENVIRONMENT"),
+          SomeAPIKey: JSON.stringify("process.env.SomeAPIKey"),
+          SomeOtherAPIKey: JSON.stringify("process.env.SomeOtherAPIKey"),
         },
       }),
     ],

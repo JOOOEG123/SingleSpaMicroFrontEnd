@@ -27,6 +27,7 @@
     "single-spa": ">=4.0.0",
     "single-spa-angular": "^7.1.0",
     "tslib": "^2.3.0",
+    "webpack": "^5.75.0",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
@@ -35,6 +36,7 @@
     "@angular/cli": "~14.0.3",
     "@angular/compiler-cli": "^14.0.0",
     "@types/jasmine": "~4.0.0",
+    "@types/node": "^18.11.17",
     "jasmine-core": "~4.1.0",
     "karma": "~6.3.0",
     "karma-chrome-launcher": "~3.1.0",
